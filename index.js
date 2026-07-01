@@ -4,9 +4,8 @@ const fs = require("fs");
 const http = require("http");
 const https = require("https");
 
-const credentials = require("./credentials.json");
-const rapidapi_key = credentials.rapidapi_key;
-const rapidapi_host = credentials.rapidapi_host;
+const rapidapi_key = process.env.RAPIDAPI_KEY;
+const rapidapi_host = process.env.RAPIDAPI_HOST;
 const port = process.env.PORT || 3000;
 
 // API 2 (Highlightly) abbreviation -> API 1 (NBA Stats) abbreviation
